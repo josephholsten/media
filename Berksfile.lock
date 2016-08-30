@@ -1,0 +1,13 @@
+DEPENDENCIES
+  mediasrv
+    path: .
+    metadata: true
+  plexapp
+    git: git://github.com/odcinek/plexapp-cookbook.git
+    revision: be03e7f4294b16876f59366c9e0c4e43489b2b05
+    ref: config_
+
+GRAPH
+  mediasrv (0.1.5)
+    plexapp (>= 0.0.0)
+  plexapp (1.0.0)

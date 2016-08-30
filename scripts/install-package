@@ -1,0 +1,9 @@
+#!/bin/sh
+
+VERSION="0.9.12.11.1406-8403350"
+URL="https://downloads.plex.tv/plex-media-server/${VERSION}/plexmediaserver_${VERSION}_amd64.deb"
+ARCHIVE="plexmediaserver.deb"
+
+sudo apt-get update
+wget -q ${URL} -O ${ARCHIVE}
+sudo dpkg -i ${ARCHIVE}

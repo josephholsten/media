@@ -1,0 +1,19 @@
+application {
+    name = "media"
+    type = "custom"
+}
+
+/* customization "dev" { */
+/*     vagrantfile = "./Vagrantfile" */
+/* } */
+customization "dev-dep" {
+    vagrantfile = "Vagrantfile"
+}
+
+customization "build" {
+    packer = "./template.json"
+}
+
+customization "deploy" {
+    terraform = "./terraform-module"
+}
