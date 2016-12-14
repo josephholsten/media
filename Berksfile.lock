@@ -3,11 +3,15 @@ DEPENDENCIES
     path: .
     metadata: true
   plexapp
-    git: git://github.com/odcinek/plexapp-cookbook.git
+    git: https://github.com/odcinek/plexapp-cookbook.git
     revision: be03e7f4294b16876f59366c9e0c4e43489b2b05
     ref: config_
 
 GRAPH
-  mediasrv (0.1.5)
+  chef-sugar (3.4.0)
+  firewall (2.5.3)
+    chef-sugar (>= 0.0.0)
+  mediasrv (0.1.10)
+    firewall (>= 0.0.0)
     plexapp (>= 0.0.0)
   plexapp (1.0.0)
