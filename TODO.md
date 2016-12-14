@@ -2,3 +2,4 @@
 - vagrant like packer
 - habitat config
 - init-plex script (or via augeas?) to set PlexOnlineToken in preferences
+- set dns records

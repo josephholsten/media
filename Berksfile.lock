@@ -11,7 +11,7 @@ GRAPH
   chef-sugar (3.4.0)
   firewall (2.5.3)
     chef-sugar (>= 0.0.0)
-  mediasrv (0.1.10)
+  mediasrv (0.1.12)
     firewall (>= 0.0.0)
     plexapp (>= 0.0.0)
   plexapp (1.0.0)

@@ -21,7 +21,7 @@ end
 
 # sync
 directory '/var/lib/music' do
-  owner 'root'
+  owner 'plex'
   group 'admin'
   mode  '0775'
 end
@@ -32,14 +32,13 @@ directory '/var/lib/plexmediaserver/.aws'
 
 template '/var/lib/plexmediaserver/.aws/credentials' do
   source 'aws_credentials.erb'
-  owner 'plex'
-  group 'plex'
-  mode '0600'
+  owner  'plex'
+  group  'plex'
+  mode   '0600'
 end
 
 cron 'music_sync' do
-  minute '0'
-  user 'plex'
-  home '/var/lib/plexmediaserver'
+  user    'plex'
+  home    '/var/lib/plexmediaserver' # for access to .aws/credentials
   command "/usr/bin/aws s3 sync #{node['media']['bucket_url']} /var/lib/music"
 end
